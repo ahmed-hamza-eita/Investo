@@ -2,23 +2,64 @@ package com.investoteam.investo
 
 import android.animation.ObjectAnimator
 import android.annotation.SuppressLint
+import android.app.ActivityOptions
+import android.content.Intent
+import android.nfc.Tag
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.animation.AnticipateInterpolator
 import android.widget.TextView
+import androidx.activity.viewModels
 import androidx.core.animation.doOnEnd
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.lifecycle.lifecycleScope
+import com.investoteam.investo.data.repository.UserDataStoreRepositoryImpl
+import com.investoteam.investo.ui.auth.AuthActivity
+import com.investoteam.investo.ui.common.viewmodels.UserViewModel
+import com.investoteam.investo.ui.common.viewmodels.UserViewModelFactory
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
+
+    private val userViewModel: UserViewModel by viewModels {
+        UserViewModelFactory(UserDataStoreRepositoryImpl(this@MainActivity))
+    }
+
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         initSplashScreen()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        isUserLoggedIn()
+    }
 
+    private fun isUserLoggedIn() {
+        lifecycleScope.launch(Dispatchers.Main) {
+            val isUserLoggedIn = userViewModel.isUserLoggedIn().first()
+            Log.d(TAG, "onCreate: isLoggedIn: $isUserLoggedIn")
+            if (isUserLoggedIn) {
+                setContentView(R.layout.activity_main)
+
+            } else {
+               userViewModel.saveUserSate(true)
+                goToAuthActivity()
+            }
+        }
+    }
+    private fun goToAuthActivity() {
+        val intent = Intent(this, AuthActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        }
+        val options = ActivityOptions.makeCustomAnimation(
+            this, android.R.anim.fade_in, android.R.anim.fade_out
+        )
+        startActivity(intent, options.toBundle())
     }
 
     private fun initSplashScreen() {
@@ -41,5 +82,9 @@ class MainActivity : AppCompatActivity() {
         } else {
             setTheme(R.style.Theme_Investo)
         }
+    }
+
+    companion object {
+        const val TAG = "MainActivity"
     }
 }
