@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.Investoteam.investo"
+    namespace = "com.investoteam.investo"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.Investoteam.investo"
+        applicationId = "com.investoteam.investo"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

@@ -1,4 +1,4 @@
-package com.Investoteam.investo
+package com.investoteam.investo
 
 import org.junit.Test
 

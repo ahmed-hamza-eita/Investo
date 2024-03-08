@@ -1,4 +1,4 @@
-package com.Investoteam.investo
+package com.investoteam.investo
 
 import android.animation.ObjectAnimator
 import android.os.Build
