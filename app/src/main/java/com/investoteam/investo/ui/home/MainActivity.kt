@@ -1,21 +1,20 @@
-package com.investoteam.investo
+package com.investoteam.investo.ui.home
 
 import android.animation.ObjectAnimator
 import android.annotation.SuppressLint
 import android.app.ActivityOptions
 import android.content.Intent
-import android.nfc.Tag
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.animation.AnticipateInterpolator
-import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.core.animation.doOnEnd
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.lifecycleScope
+import com.investoteam.investo.R
 import com.investoteam.investo.data.repository.UserDataStoreRepositoryImpl
 import com.investoteam.investo.ui.auth.AuthActivity
 import com.investoteam.investo.ui.common.viewmodels.UserViewModel
