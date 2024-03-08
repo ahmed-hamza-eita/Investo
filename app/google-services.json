@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "374285354727",
+    "project_id": "investo-33d41",
+    "storage_bucket": "investo-33d41.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:374285354727:android:dd367e533bb4464bd68442",
+        "android_client_info": {
+          "package_name": "com.investoteam.investo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMzu3z2AeGOwRar1yGP-qqHgeIxJsaR20"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
