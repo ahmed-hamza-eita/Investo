@@ -9,5 +9,20 @@
         tools:layout="@layout/fragment_auth"
         android:id="@+id/authFragment"
         android:name="com.investoteam.investo.ui.auth.fragments.AuthFragment"
-        android:label="AuthFragment" />
+        android:label="AuthFragment" >
+        <action
+            android:id="@+id/action_authFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@+id/main_nav"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_login"
+        android:id="@+id/loginFragment"
+        android:name="com.investoteam.investo.ui.auth.fragments.LoginFragment"
+        android:label="LoginFragment" />
 </navigation>
