@@ -18,9 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        findViewById<TextView>(R.id.txt).setOnClickListener {
-            throw RuntimeException("This is a crash")
-        }
+
     }
 
     private fun initSplashScreen() {
