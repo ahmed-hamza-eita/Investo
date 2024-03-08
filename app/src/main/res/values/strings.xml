@@ -3,4 +3,8 @@
     <string name="defining_text">The first Arabic platform for building a successful investment and professional future</string>
     <string name="login">Login</string>
     <string name="sign_up">Sign up</string>
+    <string name="password">password</string>
+    <string name="forget_password">Forget password?</string>
+    <string name="login_with">Login with</string>
+    <string name="e_mail">E-mail</string>
 </resources>
