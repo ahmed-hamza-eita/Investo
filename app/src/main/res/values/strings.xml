@@ -7,4 +7,22 @@
     <string name="forget_password">Forget password?</string>
     <string name="login_with">Login with</string>
     <string name="e_mail">E-mail</string>
+    <string name="send">Send</string>
+    <string name="forget_password2">Forget password</string>
+    <string name="forget_password_def">Enter your email, and we will send a link to reset your password</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="id_national">ID national</string>
+    <string name="birthday">Birthday</string>
+    <string name="gender">Gender</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="phone_number">Phone number</string>
+
+
+
+    <string-array name="spinner_type">
+        <item>Type</item>
+        <item>Beginner</item>
+        <item>Expert</item>
+    </string-array>
 </resources>
