@@ -15,6 +15,7 @@ import androidx.core.animation.doOnEnd
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.lifecycleScope
 import com.investoteam.investo.R
+import com.investoteam.investo.data.datasoursce.datastore.UserPreferencesDataStore
 import com.investoteam.investo.data.repository.UserDataStoreRepositoryImpl
 import com.investoteam.investo.ui.auth.AuthActivity
 import com.investoteam.investo.ui.common.viewmodels.UserViewModel
@@ -26,7 +27,7 @@ import kotlinx.coroutines.launch
 class MainActivity : AppCompatActivity() {
 
     private val userViewModel: UserViewModel by viewModels {
-        UserViewModelFactory(UserDataStoreRepositoryImpl(this@MainActivity))
+        UserViewModelFactory(UserDataStoreRepositoryImpl(UserPreferencesDataStore(this)))
     }
 
     @SuppressLint("MissingInflatedId")
@@ -46,11 +47,12 @@ class MainActivity : AppCompatActivity() {
                 setContentView(R.layout.activity_main)
 
             } else {
-               userViewModel.saveUserSate(true)
+                userViewModel.saveUserSate(true)
                 goToAuthActivity()
             }
         }
     }
+
     private fun goToAuthActivity() {
         val intent = Intent(this, AuthActivity::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
