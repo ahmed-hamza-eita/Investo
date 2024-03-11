@@ -4,11 +4,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.CreationExtras
+import com.investoteam.investo.data.repository.UserDataStoreRepository
 import com.investoteam.investo.data.repository.UserDataStoreRepositoryImpl
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class UserViewModel(private val userDataStoreRepository: UserDataStoreRepositoryImpl) :
+class UserViewModel(private val userDataStoreRepository: UserDataStoreRepository) :
     ViewModel() {
 
 
@@ -21,7 +22,7 @@ class UserViewModel(private val userDataStoreRepository: UserDataStoreRepository
 
 }
 
-class UserViewModelFactory(private val userPreferencesRepository: UserDataStoreRepositoryImpl) :
+class UserViewModelFactory(private val userPreferencesRepository: UserDataStoreRepository) :
     ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>, extras: CreationExtras): T {
         if (modelClass.isAssignableFrom(UserViewModel::class.java)) {
