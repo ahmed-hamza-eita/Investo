@@ -19,16 +19,15 @@ import com.investoteam.investo.data.datasoursce.datastore.UserPreferencesDataSto
 import com.investoteam.investo.data.repository.UserDataStoreRepositoryImpl
 import com.investoteam.investo.ui.auth.AuthActivity
 import com.investoteam.investo.ui.common.viewmodels.UserViewModel
-import com.investoteam.investo.ui.common.viewmodels.UserViewModelFactory
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
-    private val userViewModel: UserViewModel by viewModels {
-        UserViewModelFactory(UserDataStoreRepositoryImpl(UserPreferencesDataStore(this)))
-    }
+    private val userViewModel: UserViewModel by viewModels ()
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
