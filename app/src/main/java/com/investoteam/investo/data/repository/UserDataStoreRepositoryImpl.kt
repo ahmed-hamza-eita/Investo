@@ -7,8 +7,9 @@ import com.investoteam.investo.data.datasoursce.datastore.UserPreferencesDataSto
 import com.investoteam.investo.data.datasoursce.datastore.dataStore
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
+import javax.inject.Inject
 
-class UserDataStoreRepositoryImpl(private val userPreferencesDataStore: UserPreferencesDataStore) :
+class UserDataStoreRepositoryImpl @Inject constructor(private val userPreferencesDataStore: UserPreferencesDataStore) :
     UserDataStoreRepository {
     override suspend fun isUserLoggedIn(): Flow<Boolean> = userPreferencesDataStore.isUserLoggedIn
 
