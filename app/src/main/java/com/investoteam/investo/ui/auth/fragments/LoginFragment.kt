@@ -6,8 +6,9 @@ import android.view.View
 import androidx.viewbinding.ViewBinding
 import com.investoteam.investo.databinding.FragmentLoginBinding
 import com.investoteam.investo.utils.BindingFragment
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class LoginFragment : BindingFragment<FragmentLoginBinding>() {
     override val bindingInflater: (LayoutInflater) -> ViewBinding
         get() = FragmentLoginBinding::inflate

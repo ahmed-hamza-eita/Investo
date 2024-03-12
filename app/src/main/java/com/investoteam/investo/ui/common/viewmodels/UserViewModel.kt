@@ -6,10 +6,13 @@ import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.CreationExtras
 import com.investoteam.investo.data.repository.UserDataStoreRepository
 import com.investoteam.investo.data.repository.UserDataStoreRepositoryImpl
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class UserViewModel(private val userDataStoreRepository: UserDataStoreRepository) :
+@HiltViewModel
+class UserViewModel @Inject constructor(private val userDataStoreRepository: UserDataStoreRepository) :
     ViewModel() {
 
 
@@ -22,12 +25,4 @@ class UserViewModel(private val userDataStoreRepository: UserDataStoreRepository
 
 }
 
-class UserViewModelFactory(private val userPreferencesRepository: UserDataStoreRepository) :
-    ViewModelProvider.Factory {
-    override fun <T : ViewModel> create(modelClass: Class<T>, extras: CreationExtras): T {
-        if (modelClass.isAssignableFrom(UserViewModel::class.java)) {
-            @Suppress("UNCHECKED_CAST") return UserViewModel(userPreferencesRepository) as T
-        }
-        throw IllegalArgumentException("Unknown ViewModel class")
-    }
-}
+
