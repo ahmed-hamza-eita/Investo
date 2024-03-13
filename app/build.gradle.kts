@@ -86,6 +86,18 @@ dependencies {
     implementation ("com.google.dagger:hilt-android:2.48.1")
     kapt ("com.google.dagger:hilt-compiler:2.48.1")
 
+
+
+//retrofit
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    //okkHttp
+    implementation(platform("com.squareup.okhttp3:okhttp-bom:4.12.0"))
+    //noinspection UseTomlInstead
+    implementation("com.squareup.okhttp3:okhttp")
+    //noinspection UseTomlInstead
+    implementation("com.squareup.okhttp3:logging-interceptor")
 }
 kapt {
     correctErrorTypes = true
