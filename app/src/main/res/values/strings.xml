@@ -8,6 +8,9 @@
     <string name="login_with">Login with</string>
     <string name="e_mail">E-mail</string>
     <string name="send">Send</string>
+    <string name="required">Required</string>
+    <string name="gender">Gender</string>
+    <string name="wrong_email_address">Invalid E-mail</string>
     <string name="forget_password2">Forget password</string>
     <string name="forget_password_def">Enter your email, and we will send a link to reset your password</string>
     <string name="first_name">First name</string>
@@ -25,5 +28,11 @@
         <item>Type</item>
         <item>Beginner</item>
         <item>Expert</item>
+    </string-array>
+
+    <string-array name="spinner_gender">
+        <item>Gender</item>
+        <item>male</item>
+        <item>female</item>
     </string-array>
 </resources>
