@@ -46,5 +46,15 @@
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">@color/neutral_grey_color</item>
     </style>
-
+    <style name="toastStyle">
+        <item name="stTextColor">@color/black</item>
+        <item name="stTextSize">@dimen/_12ssp</item>
+        <item name="stColorBackground">@color/white</item>
+        <item name="stSolidBackground">true</item>
+        <item name="stStrokeWidth">3dp</item>
+        <item name="stStrokeColor">@color/white</item>
+        <item name="stIconStart">@drawable/logo</item>
+        <item name="stLength">SHORT</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
 </resources>

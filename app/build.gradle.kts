@@ -98,6 +98,8 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp")
     //noinspection UseTomlInstead
     implementation("com.squareup.okhttp3:logging-interceptor")
+    //Toast style
+    implementation ("io.github.muddz:styleabletoast:2.4.0")
 }
 kapt {
     correctErrorTypes = true

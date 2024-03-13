@@ -17,7 +17,6 @@ interface ApiCalls {
         @Field("national_id") nationalId: String,
         @Field("gender") gender: String,
         @Field("DOB") birthday: String,
-        @Field("phone") phone: String,
 
     ): UserModel
 }
