@@ -2,7 +2,7 @@
     <string name="app_name">Investo</string>
     <string name="welcome_message">The first Arabic platform for building a successful investment and professional future</string>
     <string name="login">Login</string>
-    <string name="sign_up">Register</string>
+    <string name="register">Register</string>
     <string name="password">password</string>
     <string name="forget_password">Forget password?</string>
     <string name="login_with">Login with</string>
@@ -14,10 +14,11 @@
     <string name="last_name">Last name</string>
     <string name="id_national">ID national</string>
     <string name="birthday">Birthday</string>
-    <string name="gender">Gender</string>
+    <string name="type">Type</string>
     <string name="confirm_password">Confirm password</string>
     <string name="phone_number">Phone number</string>
     <string name="login_message">Please enter your email and password</string>
+    <string name="create_an_account">Create an account</string>
 
 
     <string-array name="spinner_type">
