@@ -1,4 +1,5 @@
-package com.investoteam.investo.utils;
+package com.investoteam.investo.data.datasoursce.network
+
 
 import retrofit2.HttpException
 import java.io.IOException
@@ -22,16 +23,13 @@ class NetworkState constructor(val status: Status, val msg: Any? = null, val dat
                 is IOException -> {
                     NetworkState(Status.FAILED, "No Connection ")
                 }
-
                 is SocketTimeoutException -> {
                     NetworkState(Status.FAILED, "Bad Connection")
                 }
-
                 is HttpException -> {
 
-                    NetworkState(Status.FAILED, "HttpException  ")
+                    NetworkState(Status.FAILED, "HttpException")
                 }
-
                 else -> {
                     NetworkState(Status.FAILED, "Error")
                 }

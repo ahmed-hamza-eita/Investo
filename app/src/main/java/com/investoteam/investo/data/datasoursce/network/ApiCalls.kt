@@ -1,4 +1,4 @@
-package com.investoteam.investo.data.datasoursce.api
+package com.investoteam.investo.data.datasoursce.network
 
 import com.investoteam.investo.data.models.UserModel
 import retrofit2.http.Field
@@ -16,7 +16,7 @@ interface ApiCalls {
         @Field("password") password: String,
         @Field("national_id") nationalId: String,
         @Field("gender") gender: String,
-        @Field("DOB") birthday: String,
+        @Field("dob") birthday: String,
 
     ): UserModel
 }

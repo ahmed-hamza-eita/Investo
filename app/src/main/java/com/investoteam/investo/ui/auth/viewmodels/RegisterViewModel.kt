@@ -2,12 +2,10 @@ package com.investoteam.investo.ui.auth.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.investoteam.investo.data.datasoursce.network.NetworkState
 import com.investoteam.investo.data.repository.auth.RegisterRepository
-import com.investoteam.investo.utils.NetworkState
-import com.investoteam.investo.utils.SingleLiveEvent
+import com.investoteam.investo.data.datasoursce.network.SingleLiveEvent
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.MutableSharedFlow
-import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -17,7 +15,7 @@ class RegisterViewModel @Inject constructor(
 ) : ViewModel() {
     private val _registerLiveData = SingleLiveEvent<NetworkState>()
     val registerLiveData get() = _registerLiveData
-      fun signup(
+    fun signup(
         fName: String,
         lName: String,
         email: String,
@@ -43,7 +41,8 @@ class RegisterViewModel @Inject constructor(
                     _registerLiveData.postValue(NetworkState.getErrorMessage(data.message))
                 }
             } catch (e: Exception) {
-                _registerLiveData.postValue(NetworkState.getErrorMessage(e.message!!))
+                e.printStackTrace()
+                _registerLiveData.postValue(NetworkState.getErrorMessage(e.message.toString()))
             }
 
         }

@@ -1,6 +1,6 @@
 package com.investoteam.investo.data.repository.auth
 
-import com.investoteam.investo.data.datasoursce.api.ApiCalls
+import com.investoteam.investo.data.datasoursce.network.ApiCalls
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import javax.inject.Inject

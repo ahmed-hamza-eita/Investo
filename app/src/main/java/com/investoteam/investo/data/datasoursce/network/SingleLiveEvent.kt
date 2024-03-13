@@ -1,4 +1,4 @@
-package com.investoteam.investo.utils
+package com.investoteam.investo.data.datasoursce.network
 
 import android.util.Log
 import androidx.annotation.MainThread
@@ -38,6 +38,6 @@ class SingleLiveEvent<T> : MutableLiveData<T>() {
     }
 
     companion object {
-        private val TAG = "SingleLiveEvent"
+        private const val TAG = "SingleLiveEvent"
     }
 }
