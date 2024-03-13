@@ -52,7 +52,9 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_login"
-            style="@style/ButtonStyle"
+           android:textAllCaps="false"
+            android:textColor="@color/white"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_extra_large"
@@ -62,12 +64,13 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_register"
-            style="@style/ButtonStyle"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
             android:layout_width="match_parent"
             android:layout_marginTop="@dimen/spacing_medium"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/spacing_medium"
             android:background="@drawable/button_style"
-            android:text="@string/sign_up" />
+            android:text="@string/register" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
