@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:layoutDirection="locale">
 
+
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/border1"
         android:layout_width="wrap_content"
@@ -21,128 +22,76 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_100sdp"
-        android:src="@drawable/logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.549"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/spacing_extra_large"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:gravity="center"
-        android:layoutDirection="locale"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo">
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/HOneTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:text="@string/login" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/DescribeMessageStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_medium"
+            android:text="@string/login_message" />
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/edt_email"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/spacing_small"
-            android:layout_marginEnd="@dimen/spacing_small"
-            android:fontFamily="@font/cairo_semibold"
+            android:layout_marginHorizontal="@dimen/spacing_small"
             android:background="@drawable/edit_text_style"
             android:drawableStart="@drawable/mail"
-            android:inputType="textEmailAddress"
-            android:maxLines="1"
             android:drawablePadding="@dimen/spacing_small"
             android:hint="@string/e_mail"
-            android:padding="@dimen/spacing_small"
-            android:textSize="@dimen/text_small" />
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="@dimen/spacing_small" />
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/edt_password"
             android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/spacing_medium"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/spacing_small"
-            android:layout_marginTop="@dimen/spacing_small"
-            android:maxLines="1"
-            android:layout_marginEnd="@dimen/spacing_small"
-            android:fontFamily="@font/cairo_semibold"
+            android:layout_marginHorizontal="@dimen/spacing_small"
             android:background="@drawable/edit_text_style"
             android:drawableStart="@drawable/lock"
             android:drawablePadding="@dimen/spacing_small"
             android:hint="@string/password"
             android:inputType="textPassword"
+            android:maxLines="1"
             android:padding="@dimen/spacing_small"
             android:textSize="@dimen/text_small" />
 
-
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_login"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_extra_large"
+            android:layout_marginHorizontal="@dimen/spacing_medium"
+            android:background="@drawable/button_style"
+            android:text="@string/login" />
     </LinearLayout>
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt_forget_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/spacing_medium"
-        android:layout_marginTop="@dimen/spacing_small"
-        android:text="@string/forget_password"
-        android:textAllCaps="false"
-        android:textColor="@color/main_color"
-        android:fontFamily="@font/cairo_semibold"
-        android:textSize="@dimen/text_small"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/spacing_too_large"
-        android:background="@drawable/button_style"
-        android:text="@string/login"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="@dimen/text_small"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:fontFamily="@font/cairo_semibold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-    <TextView
-        android:id="@+id/txt_or_login_with"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/spacing_small"
-        android:text="@string/login_with"
-        android:textSize="@dimen/text_medium"
-        android:fontFamily="@font/cairo_semibold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_login" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/spacing_small"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_or_login_with">
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/btn_login_with_facebook"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/spacing_small"
-            android:src="@drawable/facebook_pic" />
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/btn_login_with_gmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/spacing_small"
-            android:src="@drawable/gmail_pic" />
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
