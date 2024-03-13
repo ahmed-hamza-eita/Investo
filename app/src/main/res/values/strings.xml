@@ -32,7 +32,7 @@
 
     <string-array name="spinner_gender">
         <item>Gender</item>
-        <item>Male</item>
-        <item>Female</item>
+        <item>male</item>
+        <item>female</item>
     </string-array>
 </resources>

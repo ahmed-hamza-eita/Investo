@@ -37,7 +37,7 @@
 
 
     <style name="HOneTextStyle">
-        <item name="android:textSize">@dimen/text_large</item>
+        <item name="android:textSize">@dimen/text_medium</item>
         <item name="android:textColor">@color/primary_color</item>
         <item name="fontFamily">@font/cairo_bold</item>
         <item name="textAllCaps">false</item>
@@ -48,7 +48,7 @@
     </style>
     <style name="toastStyle">
         <item name="stTextColor">@color/black</item>
-        <item name="stTextSize">@dimen/_12ssp</item>
+        <item name="stTextSize">@dimen/spacing_too_small</item>
         <item name="stColorBackground">@color/white</item>
         <item name="stSolidBackground">true</item>
         <item name="stStrokeWidth">3dp</item>
