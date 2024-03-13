@@ -4,9 +4,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="primary_color">#A37E2C</color>
     <color name="background_color">#ECECEC</color>
-    <color name="main_color">#A37E2c</color>
     <color name="secondary_color">#D9A300</color>
-    <color name="hint_color">#9B9B9B</color>
+    <color name="neutral_grey_color">#9B9B9B</color>
     <color name="_color">#AFD1B3</color>
     <color name="_color2">#006039</color>
     <color name="_color3">#9ECA9E</color>

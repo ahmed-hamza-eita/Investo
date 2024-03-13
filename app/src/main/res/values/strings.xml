@@ -17,7 +17,7 @@
     <string name="gender">Gender</string>
     <string name="confirm_password">Confirm password</string>
     <string name="phone_number">Phone number</string>
-
+    <string name="login_message">Please enter your email and password</string>
 
 
     <string-array name="spinner_type">
