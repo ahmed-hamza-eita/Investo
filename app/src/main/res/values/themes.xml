@@ -53,7 +53,7 @@
         <item name="stSolidBackground">true</item>
         <item name="stStrokeWidth">3dp</item>
         <item name="stStrokeColor">@color/white</item>
-        <item name="stIconStart">@drawable/logo</item>
+        <item name="stIconStart">@drawable/ic_logo</item>
         <item name="stLength">SHORT</item>
         <item name="cornerRadius">8dp</item>
     </style>
