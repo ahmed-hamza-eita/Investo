@@ -5,266 +5,172 @@
     android:layout_height="match_parent">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/border1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/border_one"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/border2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/border_two"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <LinearLayout
-        android:id="@+id/lin"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/spacing_large"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:background="@color/white">
 
 
-        <androidx.appcompat.widget.AppCompatTextView
-            style="@style/HOneTextStyle"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/border1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_small"
-            android:layout_marginBottom="@dimen/spacing_small"
-            android:text="@string/create_an_account" />
+            android:src="@drawable/ic_border_one"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/edt_f_name"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/border2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_border_two"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/lin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/spacing_small"
-            android:background="@drawable/edit_text_style"
-            android:drawableStart="@drawable/user"
-            android:drawablePadding="@dimen/spacing_small"
-            android:hint="@string/first_name"
-            android:maxLines="1"
-            android:padding="@dimen/spacing_small"
-            android:textAllCaps="false"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_small" />
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/edt_l_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/spacing_small"
-            android:layout_marginTop="@dimen/spacing_small"
-            android:background="@drawable/edit_text_style"
-            android:drawableStart="@drawable/user"
-            android:drawablePadding="@dimen/spacing_small"
-            android:hint="@string/last_name"
-            android:maxLines="1"
-            android:padding="@dimen/spacing_small"
-            android:textAllCaps="false"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_small" />
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/MediumTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:text="@string/create_an_account" />
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/edt_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/spacing_small"
-            android:layout_marginTop="@dimen/spacing_small"
-            android:background="@drawable/edit_text_style"
-            android:drawableStart="@drawable/user"
-            android:drawablePadding="@dimen/spacing_small"
-            android:hint="@string/e_mail"
-            android:inputType="textEmailAddress"
-            android:maxLines="1"
-            android:padding="@dimen/spacing_small"
-            android:textAllCaps="false"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_small" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_f_name"
+                style="@style/EditTextStyle"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:drawableStart="@drawable/ic_user"
+                android:hint="@string/first_name" />
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/edt_phone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/spacing_small"
-            android:layout_marginTop="@dimen/spacing_small"
-            android:background="@drawable/edit_text_style"
-            android:drawableStart="@drawable/outline_phone_24"
-            android:drawablePadding="@dimen/spacing_small"
-            android:hint="@string/phone_number"
-            android:inputType="phone"
-            android:maxLines="1"
-            android:padding="@dimen/spacing_small"
-            android:textAllCaps="false"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_small" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_l_name"
+                style="@style/EditTextStyle"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:drawableStart="@drawable/ic_user"
+                android:hint="@string/last_name" />
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/edt_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/spacing_small"
-            android:layout_marginTop="@dimen/spacing_small"
-            android:background="@drawable/edit_text_style"
-            android:drawableStart="@drawable/lock"
-            android:drawablePadding="@dimen/spacing_small"
-            android:hint="@string/password"
-            android:inputType="textPassword"
-            android:maxLines="1"
-            android:padding="@dimen/spacing_small"
-            android:textAllCaps="false"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_small" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_email"
+                style="@style/EditTextStyle"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:drawableStart="@drawable/ic_mail"
+                android:hint="@string/e_mail"
+                android:inputType="textEmailAddress" />
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/edt_national_number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/spacing_small"
-            android:layout_marginTop="@dimen/spacing_small"
-            android:background="@drawable/edit_text_style"
-            android:drawableStart="@drawable/id"
-            android:drawablePadding="@dimen/spacing_small"
-            android:hint="@string/id_national"
-            android:maxLines="1"
-            android:padding="@dimen/spacing_small"
-            android:textAllCaps="false"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_small" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_password"
+                style="@style/EditTextStyle"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:drawableStart="@drawable/ic_lock"
+                android:hint="@string/password"
+                android:inputType="textPassword" />
 
-        <TextView
-            android:id="@+id/edt_birthday"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/spacing_small"
-            android:layout_marginTop="@dimen/spacing_small"
-            android:background="@drawable/edit_text_style"
-            android:drawablePadding="@dimen/spacing_small"
-            android:fontFamily="@font/cairo_semibold"
-            android:hint="@string/birthday"
-            android:maxLines="1"
-            android:padding="@dimen/spacing_small"
-            android:textAllCaps="false"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_small"
-            app:drawableStartCompat="@drawable/calendar" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_phone"
+                style="@style/EditTextStyle"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:drawableStart="@drawable/ic_phone"
+                android:hint="@string/phone_number"
+                android:inputType="phone" />
 
-    </LinearLayout>
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_national_number"
+                style="@style/EditTextStyle"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:drawableStart="@drawable/ic_id"
+                android:hint="@string/id_national" />
 
 
-    <androidx.appcompat.widget.AppCompatSpinner
-        android:id="@+id/spinner_gender"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/spacing_small"
-        android:layout_marginStart="@dimen/spacing_small"
-        android:layout_marginTop="@dimen/spacing_small"
-        android:layout_marginEnd="@dimen/spacing_small"
-        android:layout_marginBottom="@dimen/spacing_small"
-        android:background="@drawable/edit_text_style"
-        android:drawableStart="@drawable/gender"
-        android:drawableEnd="@drawable/arrow_down"
-        android:entries="@array/spinner_gender"
-        android:fontFamily="@font/cairo_semibold"
-        android:hint="@string/gender"
-        android:maxLines="1"
-        android:padding="@dimen/spacing_small"
-        android:paddingVertical="@dimen/spacing_small"
-        android:paddingStart="@dimen/spacing_extra_large"
-        android:paddingEnd="@dimen/spacing_extra_large"
-        android:textSize="@dimen/text_small"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lin" />
+            <TextView
+                android:id="@+id/edt_birthday"
+                style="@style/EditTextStyle"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:gravity="center_vertical"
+                android:hint="@string/birthday"
+                app:drawableStartCompat="@drawable/ic_calendar" />
+        </LinearLayout>
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginStart="@dimen/_10sdp"
-        android:src="@drawable/gender"
-        app:layout_constraintBottom_toBottomOf="@+id/spinner_gender"
-        app:layout_constraintStart_toStartOf="@+id/spinner_gender"
-        app:layout_constraintTop_toTopOf="@+id/spinner_gender" />
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_gender"
+            style="@style/EditTextStyle"
+            android:paddingStart="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:drawableStart="@drawable/ic_gender"
+            android:drawableEnd="@drawable/ic_arrow_down"
+            android:entries="@array/spinner_gender"
+            android:hint="@string/gender"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lin" />
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginEnd="@dimen/_10sdp"
-        android:src="@drawable/arrow_down"
-        app:layout_constraintBottom_toBottomOf="@+id/spinner_gender"
-        app:layout_constraintEnd_toEndOf="@+id/spinner_gender"
-        app:layout_constraintTop_toTopOf="@+id/spinner_gender" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/ic_gender"
+            app:layout_constraintBottom_toBottomOf="@+id/spinner_gender"
+            app:layout_constraintStart_toStartOf="@+id/spinner_gender"
+            app:layout_constraintTop_toTopOf="@+id/spinner_gender" />
 
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:src="@drawable/ic_arrow_down"
+            app:layout_constraintBottom_toBottomOf="@+id/spinner_gender"
+            app:layout_constraintEnd_toEndOf="@+id/spinner_gender"
+            app:layout_constraintTop_toTopOf="@+id/spinner_gender" />
 
-    <androidx.appcompat.widget.AppCompatSpinner
-        android:id="@+id/spinner_type"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/spacing_small"
-        android:layout_marginStart="@dimen/spacing_small"
-        android:layout_marginTop="@dimen/spacing_small"
-        android:layout_marginEnd="@dimen/spacing_small"
-        android:layout_marginBottom="@dimen/spacing_small"
-        android:background="@drawable/edit_text_style"
-        android:drawableStart="@drawable/user"
-        android:drawableEnd="@drawable/arrow_down"
-        android:entries="@array/spinner_type"
-        android:fontFamily="@font/cairo_semibold"
-        android:hint="@string/gender"
-        android:maxLines="1"
-        android:padding="@dimen/spacing_small"
-        android:paddingVertical="@dimen/spacing_small"
-        android:paddingStart="@dimen/spacing_extra_large"
-        android:paddingEnd="@dimen/spacing_extra_large"
-        android:textSize="@dimen/text_small"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spinner_gender" />
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_type"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:drawableStart="@drawable/ic_user"
+            android:drawableEnd="@drawable/ic_arrow_down"
+            android:entries="@array/spinner_type"
+            android:hint="@string/gender"
+            android:paddingStart="@dimen/_24sdp"
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginStart="@dimen/_10sdp"
-        android:src="@drawable/user"
-        app:layout_constraintBottom_toBottomOf="@+id/spinner_type"
-        app:layout_constraintStart_toStartOf="@+id/spinner_type"
-        app:layout_constraintTop_toTopOf="@+id/spinner_type" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinner_gender" />
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginEnd="@dimen/_10sdp"
-        android:src="@drawable/arrow_down"
-        app:layout_constraintBottom_toBottomOf="@+id/spinner_type"
-        app:layout_constraintEnd_toEndOf="@+id/spinner_type"
-        app:layout_constraintTop_toTopOf="@+id/spinner_type" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/ic_user"
+            app:layout_constraintBottom_toBottomOf="@+id/spinner_type"
+            app:layout_constraintStart_toStartOf="@+id/spinner_type"
+            app:layout_constraintTop_toTopOf="@+id/spinner_type" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_signup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/spacing_medium"
-        android:layout_marginTop="@dimen/spacing_medium"
-        android:layout_marginEnd="@dimen/spacing_medium"
-        android:background="@drawable/button_style"
-        android:fontFamily="@font/cairo_semibold"
-        android:text="@string/register"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="@dimen/text_small"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spinner_type" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:src="@drawable/ic_arrow_down"
+            app:layout_constraintBottom_toBottomOf="@+id/spinner_type"
+            app:layout_constraintEnd_toEndOf="@+id/spinner_type"
+            app:layout_constraintTop_toTopOf="@+id/spinner_type" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_signup"
+            style="@style/PrimaryButtonStyle"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:text="@string/register"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinner_type" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </ScrollView>

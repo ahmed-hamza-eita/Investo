@@ -22,12 +22,18 @@
     <string name="phone_number">Phone number</string>
     <string name="login_message">Please enter your email and password</string>
     <string name="create_an_account">Create an account</string>
+    <string name="or">OR</string>
+    <string name="login_with_google_msg">Login with Google</string>
+    <string name="login_with_facebook_msg">Login with Facebook</string>
+    <string name="forgot_password_msg">Forgot Password?</string>
+    <string name="don_t_have_a_account_msg">Don’t have a account?</string>
+
 
 
     <string-array name="spinner_type">
         <item>Type</item>
-        <item>Beginner</item>
-        <item>Expert</item>
+        <item>beginner</item>
+        <item>expert</item>
     </string-array>
 
     <string-array name="spinner_gender">
