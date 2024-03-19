@@ -11,7 +11,7 @@
         android:id="@+id/border1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/border_one"
+        android:src="@drawable/ic_border_one"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -19,7 +19,7 @@
         android:id="@+id/border2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/border_two"
+        android:src="@drawable/ic_border_two"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -38,39 +38,31 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_100sdp"
-            android:src="@drawable/logo" />
+            android:src="@drawable/ic_logo" />
 
         <androidx.appcompat.widget.AppCompatTextView
             style="@style/TitleTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="@dimen/spacing_small"
+            android:layout_marginVertical="@dimen/_16sdp"
             android:gravity="center"
-            android:padding="@dimen/spacing_medium"
             android:text="@string/welcome_message"
             android:textColor="@color/black" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_login"
-           android:textAllCaps="false"
-            android:textColor="@color/white"
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_extra_large"
-            android:layout_marginHorizontal="@dimen/spacing_medium"
-            android:background="@drawable/button_style"
+            style="@style/PrimaryButtonStyle"
+            android:layout_marginTop="@dimen/_96sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:background="@drawable/checked_button_bg"
             android:text="@string/login" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_register"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:layout_width="match_parent"
-            android:layout_marginTop="@dimen/spacing_medium"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/spacing_medium"
-            android:background="@drawable/button_style"
+
+            style="@style/PrimaryButtonStyle"
+            android:background="@drawable/checked_button_bg"
+
             android:text="@string/register" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
