@@ -1,4 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Investo</string>
+    <string name="welcome_message">أول منصة عربية لبناء مستقبل استثماري ومهني ناجح</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="register">التسجيل</string>
+    <string name="password">كلمة المرور</string>
+    <string name="forget_password">هل نسيت كلمة المرور؟</string>
+    <string name="login_with">تسجيل الدخول باستخدام</string>
+    <string name="e_mail">البريد الإلكتروني</string>
+    <string name="send">إرسال</string>
+    <string name="required">مطلوب</string>
+    <string name="gender">الجنس</string>
+    <string name="wrong_email_address">بريد إلكتروني غير صالح</string>
+    <string name="forget_password2">هل نسيت كلمة المرور؟</string>
+    <string name="forget_password_def">أدخل بريدك الإلكتروني، وسنرسل لك رابطًا لإعادة تعيين كلمة المرور الخاصة بك</string>
+    <string name="first_name">الاسم الأول</string>
+    <string name="last_name">الاسم الأخير</string>
+    <string name="id_national">الهوية الوطنية</string>
+    <string name="birthday">تاريخ الميلاد</string>
+    <string name="type">النوع</string>
+    <string name="confirm_password">تأكيد كلمة المرور</string>
+    <string name="phone_number">رقم الهاتف</string>
+    <string name="login_message">الرجاء إدخال بريدك الإلكتروني وكلمة المرور</string>
+    <string name="create_an_account">إنشاء حساب</string>
+    <string name="or">أو</string>
+    <string name="login_with_google_msg">تسجيل الدخول باستخدام Google</string>
+    <string name="login_with_facebook_msg">تسجيل الدخول باستخدام Facebook</string>
+    <string name="forgot_password_msg">هل نسيت كلمة المرور؟</string>
+    <string name="don_t_have_a_account_msg">ليس لديك حساب؟</string>
+
+    <string-array name="spinner_type">
+        <item>النوع</item>
+        <item>مبتدئ</item>
+        <item>خبير</item>
+    </string-array>
+
+    <string-array name="spinner_gender">
+        <item>الجنس</item>
+        <item>ذكر</item>
+        <item>أنثى</item>
+    </string-array>
 </resources>
